@@ -26,16 +26,25 @@ export NEODB_REST_CLI_BASE_URL=https://your.instance
 
 ## Examples
 
-Public/read-only catalog and trending commands:
+### Verified Commands
+
+These commands were run successfully before publishing `0.1.0`.
+
+Public/read-only catalog search against `https://neodb.social`:
 
 ```bash
 neodb-rest-cli catalog search-item --query Dune --category book --output-format json
+```
+
+Result marker: the response included populated `data`, `pages`, and `count`
+fields.
+
+Additional public/read-only commands:
+
+```bash
 neodb-rest-cli trending book --output-format json
 neodb-rest-cli trending movie --output-format json
 ```
-
-The public search example currently returns populated catalog data on
-`https://neodb.social`, including `data`, `pages`, and `count` fields.
 
 Authenticated personal-data workflows:
 
